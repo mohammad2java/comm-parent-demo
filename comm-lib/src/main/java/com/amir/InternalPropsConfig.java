@@ -13,6 +13,7 @@ public class InternalPropsConfig {
 	@PostConstruct
 	public void init() {
 		
+		FileCopier.copyFileFromClasspath("other-local.properties", System.getProperty("user.dir")+"/output.properties");
 		System.out.println("Initialized !");
 	}
 
